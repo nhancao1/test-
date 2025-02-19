@@ -1,39 +1,47 @@
+/* General reset for margin, padding, and box-sizing */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-/* Style the body */
+/* Body */
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
+  background-color: #f7f7f7;
 }
 
-/* Header/logo Title */
+/* Header Section */
 .header {
-  padding: 80px;
+  padding: 60px;
   text-align: center;
-  background: #48D1CC;
+  background: linear-gradient(135deg, #004d7a, #008793, #00bf72);
   color: white;
+  border-bottom: 5px solid #00bf72;
 }
 
-/* Increase the font size of the heading */
 .header h1 {
-  font-size: 40px;
+  font-size: 42px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
-.btn {
-  display: inline-block;
-  padding: 1rem 2rem;
-  border-radius: 2px;
+.header p {
+  font-size: 20px;
+  font-weight: 300;
+  opacity: 0.9;
 }
 
-/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+/* Navbar */
 .navbar {
   overflow: hidden;
   background-color: #333;
   position: sticky;
-  position: -webkit-sticky;
   top: 0;
+  z-index: 100;
 }
 
 /* Style the navigation bar links */
@@ -44,12 +52,7 @@ body {
   text-align: center;
   padding: 14px 20px;
   text-decoration: none;
-}
-
-
-/* Right-aligned link */
-.navbar a.right {
-  float: right;
+  font-size: 18px;
 }
 
 /* Change color on hover */
@@ -58,10 +61,68 @@ body {
   color: black;
 }
 
-/* Active/current link */
+/* Active link */
 .navbar a.active {
   background-color: #666;
   color: white;
+}
+
+/* Experience Section */
+.content {
+  padding: 40px 20px;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.content h2 {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.content h3 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-left: 30px; /* Space between text and left edge */
+}
+
+.content h4 {
+  font-size: 20px;
+  color: #666;
+  margin-left: 30px; /* Space between text and left edge */
+}
+
+.experience-item {
+  margin-bottom: 20px;
+}
+
+.experience-item details {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.experience-item summary {
+  cursor: pointer;
+  display: block;
+}
+
+.experience-item summary:hover {
+  background-color: #e0e0e0;
+}
+
+.experience-item ul {
+  padding-left: 20px;
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Adjustments for closer spacing of text */
+.experience-item details[open] summary {
+  margin-bottom: 20px; /* Adds space after expanding */
 }
 
 /* Footer */
@@ -70,40 +131,9 @@ body {
   font-weight: 300;
   text-align: center;
   background: #ddd;
+  margin-top: 40px;
 }
 
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
-  .row {   
-    flex-direction: column;
-  }
-}
-
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .navbar a {
-    float: none;
-    width: 100%;
-  }
-}
-
-h3 {
-  font-family: sans-serif;
-  font-size: 25px;
-}
-
-/* Selection */
-::-moz-selection { /* Code for Firefox */
-  color: black;
-  background: lightblue;
-}
-
-::selection {
-  color: black;
-  background: lightblue;
-}
-
-/* Contact section */
 .contact-section {
   display: flex;
   flex-direction: column;
@@ -112,12 +142,6 @@ h3 {
   text-align: center;
   width: 100%;
   padding: 0 2rem;
-}
-
-@media (max-width: 28.75em) {
-  .ontact-section-header > h2 {
-    font-size: 4rem;
-  }
 }
 
 .contact-links {
@@ -132,8 +156,32 @@ h3 {
 .contact-details {
   font-size: 20px;
   transition: transform 0.3s ease-out;
+  margin: 0 1rem;
 }
 
 .contact-details:hover { 
   transform: translateY(8px);
+}
+
+footer p {
+  margin-top: 20px;
+}
+
+/* Media Query for small screens */
+@media (max-width: 700px) {
+  .content h2 {
+    font-size: 26px;
+  }
+
+  .content h3 {
+    font-size: 22px;
+  }
+
+  ul li {
+    font-size: 16px;
+  }
+
+  .content {
+    padding: 30px 10px;
+  }
 }
