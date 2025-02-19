@@ -67,35 +67,6 @@ body {
   color: white;
 }
 
-/* Skills & Expertise Section */
-.skills-expertise-section {
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 20px;
-}
-
-.skills-expertise-section h3 {
-  font-size: 2em;
-  margin-bottom: 10px;
-  color: #2980b9;
-}
-
-.skills-expertise-section .skills {
-  list-style-type: none;
-  padding-left: 20px;
-  font-size: 1.1em;
-  line-height: 1.8;
-}
-
-.skills-expertise-section .skills li {
-  margin-bottom: 8px;
-}
-
-.skills-expertise-section .technical, 
-.skills-expertise-section .communication {
-  margin-bottom: 40px;
-}
-
 /* Experience Section */
 .content {
   padding: 40px 20px;
