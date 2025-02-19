@@ -16,22 +16,17 @@ body {
 .header {
   padding: 80px;
   text-align: center;
-  background: linear-gradient(135deg, #004d7a, #008793, #00bf72);
+  background: #48D1CC;
   color: white;
 }
 
 .header h1 {
   font-size: 40px;
-  font-weight: bold;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  margin-bottom: 10px;
 }
 
 .header p {
   font-size: 20px;
   font-weight: 300;
-  opacity: 0.9;
 }
 
 /* Navbar */
@@ -54,21 +49,60 @@ body {
   font-size: 18px;
 }
 
-/* Right-aligned link */
-.navbar a.right {
-  float: right;
-}
-
 /* Change color on hover */
 .navbar a:hover {
   background-color: #ddd;
   color: black;
 }
 
-/* Active/current link */
+/* Active link */
 .navbar a.active {
   background-color: #666;
   color: white;
+}
+
+/* Skills Section */
+.skills-section {
+  padding: 40px 20px;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.skills-section h3 {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Collapsible Section */
+details {
+  background-color: #f4f4f4;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+details summary:hover {
+  background-color: #ccc;
+}
+
+details[open] summary {
+  background-color: #bbb;
+}
+
+.skills {
+  padding-left: 20px;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 /* Footer Section */
@@ -77,10 +111,8 @@ body {
   font-weight: 300;
   text-align: center;
   background: #ddd;
-  margin-top: 40px;
 }
 
-/* Contact Section */
 .contact-section {
   display: flex;
   flex-direction: column;
@@ -106,29 +138,36 @@ body {
   margin: 0 1rem;
 }
 
-.contact-details:hover {
+.contact-details:hover { 
   transform: translateY(8px);
 }
 
-footer p {
-  margin-top: 20px;
+/* Selection */
+::-moz-selection { /* Code for Firefox */
+  color: black;
+  background: lightblue;
+}
+
+::selection {
+  color: black;
+  background: lightblue;
 }
 
 /* Media Query for small screens */
 @media (max-width: 700px) {
-  .header h1 {
-    font-size: 28px;
+  .skills-section h3 {
+    font-size: 22px;
   }
 
-  .navbar a {
+  .skills {
+    font-size: 14px;
+  }
+
+  details summary {
     font-size: 16px;
   }
 
-  .footer {
-    font-size: 16px;
-  }
-
-  .contact-details {
-    font-size: 18px;
+  .skills-section {
+    padding: 30px 10px;
   }
 }
