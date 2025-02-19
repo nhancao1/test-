@@ -1,39 +1,46 @@
+/* General reset for margin, padding, and box-sizing */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-/* Style the body */
+/* Body */
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
+  background-color: #f7f7f7;
 }
 
-/* Header/logo Title */
+/* Header Section */
 .header {
   padding: 80px;
   text-align: center;
-  background: #48D1CC;
+  background: linear-gradient(135deg, #004d7a, #008793, #00bf72);
   color: white;
 }
 
-/* Increase the font size of the heading */
 .header h1 {
   font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
-.btn {
-  display: inline-block;
-  padding: 1rem 2rem;
-  border-radius: 2px;
+.header p {
+  font-size: 20px;
+  font-weight: 300;
+  opacity: 0.9;
 }
 
-/* Sticky navbar */
+/* Navbar */
 .navbar {
   overflow: hidden;
-  background-color: #333; /* Adjusted navbar color */
+  background-color: #333;
   position: sticky;
-  position: -webkit-sticky;
   top: 0;
+  z-index: 100;
 }
 
 /* Style the navigation bar links */
@@ -44,6 +51,7 @@ body {
   text-align: center;
   padding: 14px 20px;
   text-decoration: none;
+  font-size: 18px;
 }
 
 /* Right-aligned link */
@@ -63,31 +71,16 @@ body {
   color: white;
 }
 
-/* Footer */
+/* Footer Section */
 .footer {
   padding: 20px;
   font-weight: 300;
   text-align: center;
   background: #ddd;
+  margin-top: 40px;
 }
 
-h3 {
-  font-family: sans-serif;
-  font-size: 25px;
-}
-
-/* Selection */
-::-moz-selection { /* Code for Firefox */
-  color: black;
-  background: lightblue;
-}
-
-::selection {
-  color: black;
-  background: lightblue;
-}
-
-/* Contact section */
+/* Contact Section */
 .contact-section {
   display: flex;
   flex-direction: column;
@@ -96,12 +89,6 @@ h3 {
   text-align: center;
   width: 100%;
   padding: 0 2rem;
-}
-
-@media (max-width: 28.75em) {
-  .contact-section-header > h2 {
-    font-size: 4rem;
-  }
 }
 
 .contact-links {
@@ -116,8 +103,32 @@ h3 {
 .contact-details {
   font-size: 20px;
   transition: transform 0.3s ease-out;
+  margin: 0 1rem;
 }
 
-.contact-details:hover { 
+.contact-details:hover {
   transform: translateY(8px);
+}
+
+footer p {
+  margin-top: 20px;
+}
+
+/* Media Query for small screens */
+@media (max-width: 700px) {
+  .header h1 {
+    font-size: 28px;
+  }
+
+  .navbar a {
+    font-size: 16px;
+  }
+
+  .footer {
+    font-size: 16px;
+  }
+
+  .contact-details {
+    font-size: 18px;
+  }
 }
