@@ -1,155 +1,175 @@
-/* General Styles */
+/* Reset some default styles */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-/* Body */
+/* Style the body */
 body {
   font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
+  margin: 0;
+  background-color: #f7f7f7;
 }
 
-/* Header */
+/* Modern Header */
 .header {
-  padding: 80px;
+  padding: 60px;
   text-align: center;
-  background: #48D1CC;
+  background: linear-gradient(135deg, #004d7a, #008793, #00bf72);
   color: white;
+  border-bottom: 5px solid #00bf72;
 }
 
 .header h1 {
-  font-size: 40px;
+  font-size: 42px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 20px;
+  font-weight: 300;
+  opacity: 0.9;
 }
 
 /* Navbar */
 .navbar {
-  display: flex;
-  justify-content: center;
+  overflow: hidden;
   background-color: #333;
   position: sticky;
+  position: -webkit-sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 100;
 }
 
+/* Style the navigation bar links */
 .navbar a {
-  padding: 14px 20px;
+  float: left;
+  display: block;
   color: white;
-  text-decoration: none;
   text-align: center;
-  transition: 0.3s;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-size: 18px;
 }
 
+/* Change color on hover */
 .navbar a:hover {
   background-color: #ddd;
   color: black;
 }
 
+/* Active/current link */
 .navbar a.active {
   background-color: #666;
-}
-
-/* Main Content */
-main {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  background: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
-
-h2, h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: #444;
-}
-
-p {
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-/* Profile Image */
-img {
-  display: block;
-  margin: 10px auto;
-  border-radius: 50%;
-}
-
-/* Education List */
-ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-ul li {
-  background: #e7f3f3;
-  margin: 5px 0;
-  padding: 8px;
-  border-left: 4px solid #48D1CC;
-}
-
-/* Contact Section */
-.contact-section {
-  text-align: center;
-  margin: 20px 0;
-}
-
-.contact-links {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.contact-details {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 18px;
-  text-decoration: none;
   color: white;
-  background: #333;
-  border-radius: 5px;
-  transition: 0.3s;
-}
-
-.contact-details:hover {
-  background: #48D1CC;
-  transform: translateY(-5px);
 }
 
 /* Footer */
 .footer {
   padding: 20px;
+  font-weight: 300;
   text-align: center;
   background: #ddd;
+  margin-top: 40px;
+}
+
+/* Responsive layout for smaller screen widths */
+@media screen and (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+/* For very small screens (mobile), adjust navbar */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+
+h3 {
+  font-family: sans-serif;
+  font-size: 25px;
   margin-top: 20px;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 700px) {
-  .navbar {
-    flex-direction: column;
-  }
-
-  .contact-links {
-    flex-direction: column;
-  }
-
-  .contact-details {
-    width: 80%;
-    text-align: center;
-  }
+/* Selection */
+::-moz-selection { /* Code for Firefox */
+  color: black;
+  background: lightblue;
 }
 
-@media screen and (max-width: 400px) {
-  .navbar a {
-    display: block;
-    width: 100%;
-  }
+::selection {
+  color: black;
+  background: lightblue;
+}
+
+/* Contact section */
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 900px;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+
+.contact-details {
+  font-size: 20px;
+  transition: transform 0.3s ease-out;
+  margin: 0 1rem;
+}
+
+.contact-details:hover { 
+  transform: translateY(8px);
+}
+
+footer p {
+  margin-top: 20px;
+}
+
+/* Styling for profile image in "Who am I" section */
+.profile-img {
+  border-radius: 50%;
+  margin-left: 15px;
+}
+
+/* Modernized contact section styling */
+.contact-section-header {
+  margin-bottom: 2rem;
+}
+
+.contact-section-header h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Styling for education list */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* Adding spacing to section titles */
+h2, h3 {
+  margin-top: 40px;
 }
