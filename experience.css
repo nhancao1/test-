@@ -1,18 +1,18 @@
-/* Reset some default styles */
+/* General reset for margin, padding, and box-sizing */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Style the body */
+/* Body */
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   background-color: #f7f7f7;
 }
 
-/* Header */
+/* Header Section */
 .header {
   padding: 60px;
   text-align: center;
@@ -61,71 +61,68 @@ body {
   color: black;
 }
 
-/* Active/current link */
+/* Active link */
 .navbar a.active {
   background-color: #666;
   color: white;
 }
 
 /* Experience Section */
-h2 {
-  font-size: 30px;
+.content {
+  padding: 40px 20px;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.content h2 {
+  font-size: 32px;
   font-weight: 700;
-  margin-top: 40px;
   text-align: center;
+  margin-top: 40px;
 }
 
-h3 {
-  font-size: 24px;
-  margin-top: 20px;
+.content h3 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-left: 30px; /* Space between text and left edge */
 }
 
-h4.experience {
+.content h4 {
   font-size: 20px;
-  color: #777;
-  margin-bottom: 15px;
+  color: #666;
+  margin-left: 30px; /* Space between text and left edge */
 }
 
-ul {
-  list-style-type: none;
-  padding-left: 0;
-  font-size: 18px;
-  line-height: 1.8;
-}
-
-ul li {
-  margin-bottom: 10px;
-}
-
-ul li::before {
-  content: "• ";
-  color: #00bf72; /* Custom bullet point color */
-}
-
-/* Styling for Collapsible Sections */
-details {
+.experience-item {
   margin-bottom: 20px;
-  padding: 10px;
-  background-color: #f0f0f0;
-  border-radius: 8px;
 }
 
-summary {
-  font-size: 22px;
-  font-weight: 600;
-  cursor: pointer;
+.experience-item details {
+  background-color: #f4f4f4;
   padding: 10px;
-  background-color: #e0e0e0;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
 }
 
-summary:hover {
-  background-color: #d1d1d1;
+.experience-item summary {
+  cursor: pointer;
+  display: block;
 }
 
-details[open] summary {
-  background-color: #c3e4d5; /* Light green when open */
+.experience-item summary:hover {
+  background-color: #e0e0e0;
+}
+
+.experience-item ul {
+  padding-left: 20px;
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Adjustments for closer spacing of text */
+.experience-item details[open] summary {
+  margin-bottom: 20px; /* Adds space after expanding */
 }
 
 /* Footer */
@@ -172,23 +169,19 @@ footer p {
 
 /* Media Query for small screens */
 @media (max-width: 700px) {
-  h2 {
+  .content h2 {
     font-size: 26px;
   }
 
-  h3 {
-    font-size: 20px;
+  .content h3 {
+    font-size: 22px;
   }
 
-  h4.experience {
-    font-size: 18px;
+  ul li {
+    font-size: 16px;
   }
 
-  .navbar a {
-    padding: 10px;
-  }
-
-  details summary {
-    font-size: 20px;
+  .content {
+    padding: 30px 10px;
   }
 }
