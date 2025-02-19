@@ -103,6 +103,17 @@ ul li::before {
   color: #00bf72; /* Custom bullet point color */
 }
 
+/* Experience Section - Spacing Adjustments */
+.content {
+  padding: 20px;
+  margin-left: 20px; /* Space to the left */
+  margin-right: 20px; /* Space to the right */
+}
+
+.experience-item {
+  margin-bottom: 20px; /* Add space between experience items */
+}
+
 /* Footer */
 .footer {
   padding: 20px;
@@ -173,5 +184,9 @@ footer p {
 
   .navbar a {
     padding: 10px;
+  }
+
+  .content {
+    padding: 10px; /* Reduce padding on small screens */
   }
 }
