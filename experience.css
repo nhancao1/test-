@@ -40,7 +40,6 @@ body {
   overflow: hidden;
   background-color: #333;
   position: sticky;
-  position: -webkit-sticky;
   top: 0;
   z-index: 100;
 }
@@ -68,7 +67,7 @@ body {
   color: white;
 }
 
-/* Work Experience Section */
+/* Experience Section */
 h2 {
   font-size: 30px;
   font-weight: 700;
@@ -103,15 +102,30 @@ ul li::before {
   color: #00bf72; /* Custom bullet point color */
 }
 
-/* Experience Section - Spacing Adjustments */
-.content {
-  padding: 20px;
-  margin-left: 20px; /* Space to the left */
-  margin-right: 20px; /* Space to the right */
+/* Styling for Collapsible Sections */
+details {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
 }
 
-.experience-item {
-  margin-bottom: 20px; /* Add space between experience items */
+summary {
+  font-size: 22px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+summary:hover {
+  background-color: #d1d1d1;
+}
+
+details[open] summary {
+  background-color: #c3e4d5; /* Light green when open */
 }
 
 /* Footer */
@@ -156,18 +170,6 @@ footer p {
   margin-top: 20px;
 }
 
-/* Styling for contact section header */
-.contact-section-header {
-  margin-bottom: 2rem;
-}
-
-.contact-section-header h2 {
-  font-size: 3rem;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 1rem;
-}
-
 /* Media Query for small screens */
 @media (max-width: 700px) {
   h2 {
@@ -186,7 +188,7 @@ footer p {
     padding: 10px;
   }
 
-  .content {
-    padding: 10px; /* Reduce padding on small screens */
+  details summary {
+    font-size: 20px;
   }
 }
