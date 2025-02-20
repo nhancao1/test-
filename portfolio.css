@@ -7,42 +7,34 @@
 
 /* Body */
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f7f7f7;
-  margin: 0;
-  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
 /* Header Section */
 .header {
-  padding: 80px 20px;
+  padding: 60px 20px;
   text-align: center;
-  background: linear-gradient(135deg, #004d7a, #008793, #00bf72);
+  background: #0066cc;
   color: white;
-  border-bottom: 5px solid #00bf72;
 }
 
 .header h1 {
   font-size: 48px;
-  font-weight: bold;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .header p {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 300;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 /* Navbar */
 .navbar {
-  overflow: hidden;
   background-color: #333;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  overflow: hidden;
 }
 
 .navbar a {
@@ -50,7 +42,7 @@ body {
   display: block;
   color: white;
   text-align: center;
-  padding: 18px 25px;
+  padding: 16px 20px;
   text-decoration: none;
   font-size: 18px;
 }
@@ -61,150 +53,119 @@ body {
 }
 
 .navbar a.active {
-  background-color: #666;
+  background-color: #4CAF50;
   color: white;
 }
 
-/* Content Section */
-.content {
-  padding: 50px 30px;
+/* Projects Section */
+.projects {
+  padding: 40px 30px;
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: 1200px;
 }
 
-.content h2 {
-  font-size: 36px;
-  font-weight: 700;
+.projects h2 {
   text-align: center;
-  margin-top: 50px;
+  font-size: 36px;
+  margin-bottom: 40px;
 }
 
-.content h3 {
-  font-size: 28px;
-  font-weight: bold;
-  margin-left: 30px; /* Space between text and left edge */
-  margin-top: 30px;
+.project {
+  margin-bottom: 40px;
 }
 
-.content h4 {
-  font-size: 22px;
-  color: #666;
-  margin-left: 30px; /* Space between text and left edge */
-  margin-top: 10px;
-}
-
-/* Experience Item Styling */
-.experience-item {
-  margin-bottom: 30px;
-}
-
-.experience-item details {
-  background-color: #f4f4f4;
-  padding: 15px;
-  border-radius: 8px;
-  margin-bottom: 25px;
-  transition: all 0.3s ease;
-}
-
-.experience-item summary {
+.project h3 {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
   cursor: pointer;
-  display: block;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 24px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
-.experience-item summary:hover {
-  background-color: #e0e0e0;
+.project h3:hover {
+  background-color: #45a049;
 }
 
-.experience-item ul {
-  padding-left: 30px;
-  margin-top: 10px;
-  font-size: 16px;
-  line-height: 1.7;
-}
-
-.experience-item details[open] summary {
-  margin-bottom: 15px; /* Adds space after expanding */
-}
-
-/* Collapsible Item - Customizing open state for smoother transition */
-.experience-item details[open] {
+.collapsible-content {
+  display: none;
+  margin-top: 20px;
+  padding: 20px;
   background-color: #f9f9f9;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.collapsible-content a {
+  color: #0066cc;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.collapsible-content a:hover {
+  text-decoration: underline;
 }
 
 /* Footer Section */
 .footer {
-  padding: 30px;
-  font-weight: 300;
+  background-color: #333;
+  color: white;
+  padding: 20px;
   text-align: center;
-  background: #ddd;
-  margin-top: 60px;
 }
 
-.contact-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  padding: 0 2rem;
+.footer .contact-section {
+  margin-bottom: 20px;
 }
 
-.contact-links {
+.footer .contact-section h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.footer .contact-links {
   display: flex;
   justify-content: center;
-  width: 100%;
-  max-width: 900px;
-  margin-top: 3rem;
-  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.contact-details {
-  font-size: 20px;
-  transition: transform 0.3s ease-out;
-  margin: 0 1.5rem;
+.footer .contact-links .btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  color: white;
+  background-color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-.contact-details:hover {
-  transform: translateY(8px);
+.footer .contact-links .btn:hover {
+  background-color: #4CAF50;
 }
 
-footer p {
-  margin-top: 25px;
+.footer p {
+  margin-top: 10px;
   font-size: 16px;
 }
 
-/* Media Query for small screens */
+/* Responsive Design */
 @media (max-width: 700px) {
-  .header h1 {
-    font-size: 36px;
-  }
-
-  .content h2 {
+  .projects h2 {
     font-size: 28px;
   }
 
-  .content h3 {
-    font-size: 24px;
+  .project h3 {
+    font-size: 20px;
   }
 
-  .content h4 {
-    font-size: 18px;
+  .footer .contact-links {
+    flex-direction: column;
+    gap: 10px;
   }
 
-  ul li {
-    font-size: 14px;
-  }
-
-  .content {
-    padding: 40px 15px;
-  }
-
-  /* Make collapsible items more compact */
-  .experience-item details {
-    padding: 10px;
+  .footer .contact-links .btn {
+    width: 100%;
+    text-align: center;
   }
 }
