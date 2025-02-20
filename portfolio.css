@@ -93,6 +93,7 @@ body {
   margin-top: 10px;
 }
 
+/* Experience Item Styling */
 .experience-item {
   margin-bottom: 30px;
 }
@@ -102,6 +103,7 @@ body {
   padding: 15px;
   border-radius: 8px;
   margin-bottom: 25px;
+  transition: all 0.3s ease;
 }
 
 .experience-item summary {
@@ -124,6 +126,12 @@ body {
 
 .experience-item details[open] summary {
   margin-bottom: 15px; /* Adds space after expanding */
+}
+
+/* Collapsible Item - Customizing open state for smoother transition */
+.experience-item details[open] {
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Footer Section */
@@ -193,5 +201,10 @@ footer p {
 
   .content {
     padding: 40px 15px;
+  }
+
+  /* Make collapsible items more compact */
+  .experience-item details {
+    padding: 10px;
   }
 }
