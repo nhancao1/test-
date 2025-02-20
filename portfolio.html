@@ -9,6 +9,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <script src="navbar.js"></script>
+    <script>
+      function toggleCollapsible(id) {
+        const element = document.getElementById(id);
+        if (element.style.display === "none") {
+          element.style.display = "block";
+        } else {
+          element.style.display = "none";
+        }
+      }
+    </script>
     <title>Portfolio | Nhan Cao's Portfolio</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,65 +42,79 @@
       <h2>You may find below some of my projects</h2>
 
       <!-- Web Development Project -->
-      <div>
-        <h3>Web Development Project</h3>
-        <h4>September 2019-December 2019</h4>
-        <p>This web development project was a group project with the goal to develop a website as a team using front-end web technologies such as HTML5, CSS3, JavaScript, jQuery, XML, and JSON. Each group had a minimum of four students with the requirements that each student contribute to at least four webpages. The theme for the website is a Star-Wars theme park.</p>
-        <a href="https://nhancao1.github.io/webproject/" target="_blank">Check it out here.</a><br>
+      <div class="project">
+        <h3 onclick="toggleCollapsible('webProjectDetails')" class="collapsible">Web Development Project</h3>
+        <div id="webProjectDetails" style="display:none">
+          <h4>September 2019-December 2019</h4>
+          <p>This web development project was a group project with the goal to develop a website as a team using front-end web technologies such as HTML5, CSS3, JavaScript, jQuery, XML, and JSON. Each group had a minimum of four students with the requirements that each student contribute to at least four webpages. The theme for the website is a Star-Wars theme park.</p>
+          <a href="https://nhancao1.github.io/webproject/" target="_blank">Check it out here.</a><br>
+        </div>
       </div>
 
       <!-- Database Development Project -->
-      <div>
-        <h3>Database Development Project</h3>
-        <h4>September 2020-December 2020</h4>
-        <p>This database development project was a group project with the goal to develop a website to have customers access a database from the server using PHP7 and SQL. The theme was a food delivery services website. Users could look up specific items and check out upon order. This group project was completed for a Multimedia Data Management course for learning purposes over the course of 4 months.</p>
-        <a href="https://nhancao1.github.io/databaseproject/" target="_blank">Check it out here.</a>
+      <div class="project">
+        <h3 onclick="toggleCollapsible('dbProjectDetails')" class="collapsible">Database Development Project</h3>
+        <div id="dbProjectDetails" style="display:none">
+          <h4>September 2020-December 2020</h4>
+          <p>This database development project was a group project with the goal to develop a website to have customers access a database from the server using PHP7 and SQL. The theme was a food delivery services website. Users could look up specific items and check out upon order. This group project was completed for a Multimedia Data Management course for learning purposes over the course of 4 months.</p>
+          <a href="https://nhancao1.github.io/databaseproject/" target="_blank">Check it out here.</a>
+        </div>
       </div>
 
       <!-- Research Paper Project -->
-      <div>
-        <h3>Research Paper Project</h3>
-        <h4>September 2021-December 2021</h4>
-        <p>This research paper project focused on analyzing the environmental effects of waste management in Ottawa. A questionnaire was developed to simulate results using synthetic data. This research paper was completed for a Data Analysis and Research Methodology course for learning purposes over the course of 4 months.</p>
-        <br><iframe src="https://docs.google.com/document/d/e/2PACX-1vT9AMyvAVTyT-bzYf_9660Tvft2paTppsB4H_RFH6OOOQ4uvbHOHFaYkWZAO2kVBl7aaMvc1HUzwUhE/pub?embedded=true" width="1000" height="500"></iframe>
+      <div class="project">
+        <h3 onclick="toggleCollapsible('researchPaperDetails')" class="collapsible">Research Paper Project</h3>
+        <div id="researchPaperDetails" style="display:none">
+          <h4>September 2021-December 2021</h4>
+          <p>This research paper project focused on analyzing the environmental effects of waste management in Ottawa. A questionnaire was developed to simulate results using synthetic data. This research paper was completed for a Data Analysis and Research Methodology course for learning purposes over the course of 4 months.</p>
+          <iframe src="https://docs.google.com/document/d/e/2PACX-1vT9AMyvAVTyT-bzYf_9660Tvft2paTppsB4H_RFH6OOOQ4uvbHOHFaYkWZAO2kVBl7aaMvc1HUzwUhE/pub?embedded=true" width="1000" height="500"></iframe>
+        </div>
       </div>
 
       <!-- Project Management Business Report -->
-      <div>
-        <h3>Project Management Business Report</h3>
-        <h4>January 2023-April 2023</h4>
-        <p>This project management report was a group project with the goal to develop an online presence for a local business in Chinatown Ottawa (Lim Bangkok Grocery). This group project was completed for a Project Management course for learning purposes over the course of 4 months.</p>
-        <br><iframe src="https://docs.google.com/document/d/e/2PACX-1vRz72js4qO90f1wGg1DXyYV07kTgEtQDzU3h3GSZnzj5uVYyr219JinkzBYILC-zmU7qV0ff-WF1Uxe/pub?embedded=true" width="1000" height="500"></iframe>
+      <div class="project">
+        <h3 onclick="toggleCollapsible('pmReportDetails')" class="collapsible">Project Management Business Report</h3>
+        <div id="pmReportDetails" style="display:none">
+          <h4>January 2023-April 2023</h4>
+          <p>This project management report was a group project with the goal to develop an online presence for a local business in Chinatown Ottawa (Lim Bangkok Grocery). This group project was completed for a Project Management course for learning purposes over the course of 4 months.</p>
+          <iframe src="https://docs.google.com/document/d/e/2PACX-1vRz72js4qO90f1wGg1DXyYV07kTgEtQDzU3h3GSZnzj5uVYyr219JinkzBYILC-zmU7qV0ff-WF1Uxe/pub?embedded=true" width="1000" height="500"></iframe>
+        </div>
       </div>
 
       <!-- Visualization Development Project -->
-      <div>
-        <h3>Visualization Development Project</h3>
-        <h4>January 2024-April 2024</h4>
-        <p>This visualization project was a group project with the goal of creating a visualization to map and visualize the places with the most bike thefts in Centretown and West Centretown Ottawa. This group project was completed for a Data Visualization course for learning purposes over the course of 4 months.</p>
-        <br><a href="https://toanc831.wixsite.com/irm2006datavizbike" target="_blank">Check the Wix website here.</a>
-        <br><a href="https://public.tableau.com/app/profile/toan.cao/viz/BikeTheftsOttawaDashboardFinal/Map_Dashboard" target="_blank">Check the implementation here.</a>
+      <div class="project">
+        <h3 onclick="toggleCollapsible('vizProjectDetails')" class="collapsible">Visualization Development Project</h3>
+        <div id="vizProjectDetails" style="display:none">
+          <h4>January 2024-April 2024</h4>
+          <p>This visualization project was a group project with the goal of creating a visualization to map and visualize the places with the most bike thefts in Centretown and West Centretown Ottawa. This group project was completed for a Data Visualization course for learning purposes over the course of 4 months.</p>
+          <a href="https://toanc831.wixsite.com/irm2006datavizbike" target="_blank">Check the Wix website here.</a>
+          <br><a href="https://public.tableau.com/app/profile/toan.cao/viz/BikeTheftsOttawaDashboardFinal/Map_Dashboard" target="_blank">Check the implementation here.</a>
+        </div>
       </div>
 
       <!-- Machine Learning in Water Quality Management Report -->
-      <div>
-        <h3>Machine Learning in Water Quality Management Report</h3>
-        <h4>January 2024-April 2024</h4>
-        <p>This machine learning report was a final course project with the goal of applying machine learning concepts to an information resource management field. I chose the water quality management field. This project was completed for an Applied Machine Learning and Big Data Analytics course for learning purposes over the course of 4 months.</p>
-        <br><iframe src="https://docs.google.com/document/d/e/2PACX-1vQ4IABQoUVexbNy67de-U7oWy6jHMdp_NaWa427Xq36TRhnVvfjx40LktdJIIr4XHsU_I1CdBa_CrWP/pub?embedded=true" width="1000" height="500"></iframe>
+      <div class="project">
+        <h3 onclick="toggleCollapsible('mlWaterQualityDetails')" class="collapsible">Machine Learning in Water Quality Management Report</h3>
+        <div id="mlWaterQualityDetails" style="display:none">
+          <h4>January 2024-April 2024</h4>
+          <p>This machine learning report was a final course project with the goal of applying machine learning concepts to an information resource management field. I chose the water quality management field. This project was completed for an Applied Machine Learning and Big Data Analytics course for learning purposes over the course of 4 months.</p>
+          <iframe src="https://docs.google.com/document/d/e/2PACX-1vQ4IABQoUVexbNy67de-U7oWy6jHMdp_NaWa427Xq36TRhnVvfjx40LktdJIIr4XHsU_I1CdBa_CrWP/pub?embedded=true" width="1000" height="500"></iframe>
+        </div>
       </div>
 
       <!-- IRM Capstone Project -->
-      <div>
-        <h3>IRM Capstone Project</h3>
-        <h4>September 2023-April 2024</h4>
-        <p>This capstone project was a year-long project completed over 8 months with a cumulative application of all courses. The capstone project focused on examining the challenges and issues with current metadata standards in academic libraries, proposing a redefined and simplified metadata standard of MARC21 and Dublin Core.</p>
-        <br><iframe src="https://docs.google.com/document/d/e/2PACX-1vT-DzZnYmwFIy_KlujJ0qLcv85_r4FLIg-6O_sDZAddwuZ3JZKTCAO10y5rQkeogOYPox6v01Q9O0Ge/pub?embedded=true" width="1000" height="500"></iframe>
-        <br><a href="https://nhancao1.github.io/Capstone-Project/" target="_blank">Check it out here.</a><br>
+      <div class="project">
+        <h3 onclick="toggleCollapsible('capstoneProjectDetails')" class="collapsible">IRM Capstone Project</h3>
+        <div id="capstoneProjectDetails" style="display:none">
+          <h4>September 2023-April 2024</h4>
+          <p>This capstone project was a year-long project completed over 8 months with a cumulative application of all courses. The capstone project focused on examining the challenges and issues with current metadata standards in academic libraries, proposing a redefined and simplified metadata standard of MARC21 and Dublin Core.</p>
+          <iframe src="https://docs.google.com/document/d/e/2PACX-1vT-DzZnYmwFIy_KlujJ0qLcv85_r4FLIg-6O_sDZAddwuZ3JZKTCAO10y5rQkeogOYPox6v01Q9O0Ge/pub?embedded=true" width="1000" height="500"></iframe>
+          <br><a href="https://nhancao1.github.io/Capstone-Project/" target="_blank">Check it out here.</a><br>
+        </div>
       </div>
     </section>
 
- <!-- Footer Section -->
+    <!-- Footer Section -->
     <footer class="footer">
         <section id="contact" class="contact-section">
             <div class="contact-section-header">
@@ -104,6 +128,5 @@
         </section>
         <p>Thanks for visiting! Copyright <i class="far fa-copyright"></i> Nhan Cao</p>
     </footer>
-	  
   </body>
 </html>
