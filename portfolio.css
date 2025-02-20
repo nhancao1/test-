@@ -1,171 +1,334 @@
-/* General reset for margin, padding, and box-sizing */
+/* Reset some default styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body */
+/* Style the body */
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: #f7f7f7;
 }
 
-/* Header Section */
+/* Header */
 .header {
-  padding: 60px 20px;
+  padding: 60px;
   text-align: center;
-  background: #0066cc;
+  background: linear-gradient(135deg, #004d7a, #008793, #00bf72);
   color: white;
+  border-bottom: 5px solid #00bf72;
 }
 
 .header h1 {
-  font-size: 48px;
+  font-size: 42px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
   margin-bottom: 10px;
 }
 
 .header p {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 300;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 /* Navbar */
 .navbar {
-  background-color: #333;
   overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
+/* Style the navigation bar links */
 .navbar a {
   float: left;
   display: block;
   color: white;
   text-align: center;
-  padding: 16px 20px;
+  padding: 14px 20px;
   text-decoration: none;
   font-size: 18px;
 }
 
+/* Change color on hover */
 .navbar a:hover {
   background-color: #ddd;
   color: black;
 }
 
+/* Active/current link */
 .navbar a.active {
-  background-color: #4CAF50;
+  background-color: #666;
   color: white;
 }
 
-/* Projects Section */
-.projects {
-  padding: 40px 30px;
+/* About Me Section */
+.content {
+  padding: 40px 20px;  /* Added more space on left and right */
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1000px;  /* Restrict content width */
 }
 
-.projects h2 {
+.content h2 {
+  font-size: 32px;
+  font-weight: 700;
   text-align: center;
-  font-size: 36px;
-  margin-bottom: 40px;
+  margin-top: 40px;
 }
 
-.project {
-  margin-bottom: 40px;
-}
-
-.project h3 {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 24px;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.project h3:hover {
-  background-color: #45a049;
-}
-
-.collapsible-content {
-  display: none;
+.content h3 {
+  font-size: 26px;
   margin-top: 20px;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  font-weight: 600;
 }
 
-.collapsible-content a {
-  color: #0066cc;
-  text-decoration: none;
+.content img {
+  display: block;
+  margin: 20px auto;
+  border-radius: 50%;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
   font-size: 18px;
+  line-height: 1.8;
+  margin-top: 20px; /* Space between text and the list */
 }
 
-.collapsible-content a:hover {
-  text-decoration: underline;
+ul li {
+  margin-bottom: 10px;
 }
 
-/* Footer Section */
+/* Footer */
 .footer {
-  background-color: #333;
-  color: white;
   padding: 20px;
+  font-weight: 300;
   text-align: center;
+  background: #ddd;
+  margin-top: 40px;
 }
 
-.footer .contact-section {
-  margin-bottom: 20px;
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: 0 2rem;
 }
 
-.footer .contact-section h2 {
-  font-size: 30px;
-  margin-bottom: 20px;
-}
-
-.footer .contact-links {
+.contact-links {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  width: 100%;
+  max-width: 900px;
+  margin-top: 4rem;
+  flex-wrap: wrap;
 }
 
-.footer .contact-links .btn {
-  padding: 10px 20px;
-  font-size: 18px;
-  color: white;
-  background-color: #333;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+.contact-details {
+  font-size: 20px;
+  transition: transform 0.3s ease-out;
+  margin: 0 1rem;
 }
 
-.footer .contact-links .btn:hover {
-  background-color: #4CAF50;
+.contact-details:hover { 
+  transform: translateY(8px);
 }
 
-.footer p {
-  margin-top: 10px;
-  font-size: 16px;
+footer p {
+  margin-top: 20px;
 }
 
-/* Responsive Design */
+/* Media Query for small screens */
 @media (max-width: 700px) {
-  .projects h2 {
-    font-size: 28px;
+  h2 {
+    font-size: 26px;
   }
 
-  .project h3 {
-    font-size: 20px;
+  h3 {
+    font-size: 22px;
   }
 
-  .footer .contact-links {
-    flex-direction: column;
-    gap: 10px;
+  ul li {
+    font-size: 16px;
   }
 
-  .footer .contact-links .btn {
-    width: 100%;
-    text-align: center;
+  .content {
+    padding: 30px 10px;  /* Smaller padding on smaller screens */
+  }
+}
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: #f7f7f7;
+}
+
+/* Header */
+.header {
+  padding: 60px;
+  text-align: center;
+  background: linear-gradient(135deg, #004d7a, #008793, #00bf72);
+  color: white;
+  border-bottom: 5px solid #00bf72;
+}
+
+.header h1 {
+  font-size: 42px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 20px;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+/* Navbar */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* About Me Section */
+.content {
+  padding: 40px 20px;  /* Added more space on left and right */
+  margin: 0 auto;
+  max-width: 1000px;  /* Restrict content width */
+}
+
+.content h2 {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.content h3 {
+  font-size: 26px;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.content img {
+  display: block;
+  margin: 20px auto;
+  border-radius: 50%;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  font-size: 18px;
+  line-height: 1.8;
+  margin-top: 20px; /* Space between text and the list */
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  font-weight: 300;
+  text-align: center;
+  background: #ddd;
+  margin-top: 40px;
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 900px;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+
+.contact-details {
+  font-size: 20px;
+  transition: transform 0.3s ease-out;
+  margin: 0 1rem;
+}
+
+.contact-details:hover { 
+  transform: translateY(8px);
+}
+
+footer p {
+  margin-top: 20px;
+}
+
+/* Media Query for small screens */
+@media (max-width: 700px) {
+  h2 {
+    font-size: 26px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  ul li {
+    font-size: 16px;
+  }
+
+  .content {
+    padding: 30px 10px;  /* Smaller padding on smaller screens */
   }
 }
